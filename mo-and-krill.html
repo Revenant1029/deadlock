@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mo &amp; Krill | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Mo_&_Krill_card.png" alt="Mo & Krill portrait">
+            <div class="hero-header-text">
+                <h2><img src="Mo_&_Krill_name.svg" alt="Mo & Krill" class="hero-name-img-large"></h2>
+                <span class="role-tag tank">Tank</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-mo-and-krill" src="Krill_upgrade_power4_07.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-mo-and-krill')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 930 +65</li>
+                <li><strong>Health Regen:</strong> 1</li>
+                <li><strong>Crit Reduction:</strong> 20%</li>
+                <li><strong>Move Speed:</strong> 8 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 13.9 m/s</li>
+                <li><strong>Stamina:</strong> 3</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Yellow Canary</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Rapid Fire, Spreadshot</li>
+                <li><strong>Damage Per Second:</strong> 59.7</li>
+                <li><strong>Bullet Damage:</strong> 2.82 +0.0881</li>
+                <li><strong>Pellets per shot:</strong> 4</li>
+                <li><strong>Ammo:</strong> 20</li>
+                <li><strong>Bullets per sec:</strong> 5.29</li>
+                <li><strong>Reload Time:</strong> 2.82s</li>
+                <li><strong>Bullet Velocity:</strong> 320 m/s</li>
+                <li><strong>Bullet Radius:</strong> 7.62 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Falloff Range:</strong> 20m → 58m</li>
+            </ul>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Scorn</h4>
+                <p>
+                    Deal damage to nearby enemies and heal yourself based on the damage
+                    done. Heal is stronger against enemy heroes. Can be cast while
+                    burrowed or during Combo.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 13s</li>
+                    <li><strong>Radius:</strong> 9m</li>
+                    <li><strong>Damage:</strong> 50 +0.75</li>
+                    <li><strong>Hero Damage to Heal:</strong> 1.2x</li>
+                    <li><strong>Damage to Heal:</strong> 0.35x</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Burrow</h4>
+                <p>
+                    Burrow underground, moving faster and gaining spirit and bullet armor.
+                    Damage from enemy heroes reduces the speed bonus. When you jump out,
+                    deal spirit damage, slow, and knockup enemies in a spin attack.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 40s</li>
+                    <li><strong>Channel Duration:</strong> 5s</li>
+                    <li><strong>Radius:</strong> 5m</li>
+                    <li><strong>DPS:</strong> 75 +1.49</li>
+                    <li><strong>Bullet Resist:</strong> 60%</li>
+                    <li><strong>Spirit Resist:</strong> 30%</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Sand Blast</h4>
+                <p>
+                    Spray sand that disarms enemies in front of you and deals damage.
+                    A fast-moving cylindrical projectile that applies its effects on hit.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 40s</li>
+                    <li><strong>Cast Range:</strong> 25m</li>
+                    <li><strong>Duration:</strong> 2.5s</li>
+                    <li><strong>Disarm:</strong> 2.5s</li>
+                    <li><strong>Damage:</strong> 40</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Combo <em>(Ultimate)</em></h4>
+                <p>
+                    Hold the target in place, stunning them and dealing damage during
+                    the channel. If they die during, or within 3 seconds of Combo ending,
+                    you permanently gain max health.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 150s</li>
+                    <li><strong>Channel Duration:</strong> 2.4s</li>
+                    <li><strong>Cast Range:</strong> 4m</li>
+                    <li><strong>DPS:</strong> 40 +0.6</li>
+                    <li><strong>Bonus Max Health Per Kill:</strong> 40</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                Mo and Krill are members of The Tunnel Rats, a group that help facilitate
+                illicit trade and commerce between the boroughs thanks to a network of
+                underground tunnels. But while most denizens of the New York underworld
+                respect the work The Rats do, every once in a while a gang tries to exploit
+                the tunnel system for personal vendettas… that's when Mo and Krill step in
+                and remind the city what happens to those who disrespect their hospitality.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

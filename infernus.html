@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infernus | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Infernus_card.png" alt="Infernus portrait">
+            <div class="hero-header-text">
+                <h2><img src="Infernus_name.svg" alt="Infernus" class="hero-name-img-large"></h2>
+                <span class="role-tag damage">Damage</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-infernus" src="Inferno_upgrade_power3_03.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-infernus')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 830 +39</li>
+                <li><strong>Health Regen:</strong> 2</li>
+                <li><strong>Move Speed:</strong> 6.7 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 14.7 m/s</li>
+                <li><strong>Stamina:</strong> 3</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Incendiary Remarks</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Rapid Fire, Medium Range</li>
+                <li><strong>Damage Per Second:</strong> 52.4</li>
+                <li><strong>Bullet Damage:</strong> 5.5 +0.088</li>
+                <li><strong>Ammo:</strong> 27</li>
+                <li><strong>Bullets per sec:</strong> 9.52</li>
+                <li><strong>Reload Time:</strong> 2.25s</li>
+                <li><strong>Bullet Velocity:</strong> 660 m/s</li>
+                <li><strong>Bullet Radius:</strong> 10.2 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Falloff Range:</strong> 18m → 55m</li>
+            </ul>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Napalm</h4>
+                <p>
+                    Spew an incendiary mixture, dealing spirit damage, applying slow, and
+                    coating targets in napalm. Napalm increases the damage taken by affected
+                    enemies and reduces their healing.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 20m</li>
+                    <li><strong>Cooldown:</strong> 25s</li>
+                    <li><strong>Damage:</strong> 40 +0.6</li>
+                    <li><strong>Slow Duration:</strong> 4s</li>
+                    <li><strong>Damage Taken Increase:</strong> 16%</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Flame Dash</h4>
+                <p>
+                    Dash forward, gaining slow resistance while leaving a flaming trail that
+                    deals spirit damage over time. Hold Move forward while active to dash
+                    farther. Infernus can cast other abilities and items during the dash
+                    without breaking it.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 38s</li>
+                    <li><strong>Duration:</strong> 3s</li>
+                    <li><strong>Trail DPS:</strong> 30</li>
+                    <li><strong>Slow Resistance:</strong> 50%</li>
+                    <li><strong>Max Dash Speed:</strong> 20 m/s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Afterburn</h4>
+                <p>
+                    Weapon hits build up a burning effect, dealing spirit damage over time.
+                    Abilities refresh the base burn duration and weapon hits extend it.
+                    Headshots build up faster than body shots.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Type:</strong> Passive</li>
+                    <li><strong>Burn DPS:</strong> 14</li>
+                    <li><strong>Burn Duration:</strong> 3s</li>
+                    <li><strong>Buildup per Bullet:</strong> 8.1%</li>
+                    <li><strong>Buildup per Headshot:</strong> 15.4%</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Concussive Combustion <em>(Ultimate)</em></h4>
+                <p>
+                    Become a living bomb, dealing spirit damage and applying stun to all
+                    nearby enemies after a delay. Once cast, Concussive Combustion cannot
+                    be interrupted.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 190s</li>
+                    <li><strong>Radius:</strong> 12m</li>
+                    <li><strong>Explosion Delay:</strong> 3.25s</li>
+                    <li><strong>Damage:</strong> 125</li>
+                    <li><strong>Stun Duration:</strong> 1.25s</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                Like most teenagers, Infernus was wild, rebellious, and impetuous. Unlike
+                most teenagers, Infernus was a creature from another plane and had a
+                supernatural mastery over fire. Needless to say: his youth was filled with
+                no small amount of arson, murder, and evidence disposal.
+            </p>
+            <p>
+                But that was then. Now an adult, Infernus has mellowed out considerably.
+                He's happy working at a bar with good live music, and talking to interesting
+                people. That being said when someone at the bar gets belligerent or violent,
+                he's not afraid to dust off the skills he once honed.
+            </p>
+            <p>
+                He fights in the ritual to save Jezebel's, the bar he calls home, from closure.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

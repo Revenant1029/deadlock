@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrams | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Abrams_card.png" alt="Abrams portrait">
+            <div class="hero-header-text">
+                <h2><img src="1920px-Abrams_name.svg.png" alt="Abrams" class="hero-name-img-large"></h2>
+                <span class="role-tag tank">Tank</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-abrams" src="Atlas_upgrade_power1_10.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-abrams')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 800 +49</li>
+                <li><strong>Health Regen:</strong> 1.5</li>
+                <li><strong>Move Speed:</strong> 6.4 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 13.9 m/s</li>
+                <li><strong>Stamina:</strong> 3</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Case Closed</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Spreadshot, Close Range</li>
+                <li><strong>Damage Per Second:</strong> 54</li>
+                <li><strong>Bullet Damage:</strong> 3.78 +0.1</li>
+                <li><strong>Pellets per shot:</strong> 9</li>
+                <li><strong>Ammo:</strong> 9</li>
+                <li><strong>Bullets per sec:</strong> 1.59</li>
+                <li><strong>Reload Time:</strong> 0.353s (per shell)</li>
+                <li><strong>Bullet Velocity:</strong> 610 m/s</li>
+                <li><strong>Bullet Radius:</strong> 7.62 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.74</li>
+                <li><strong>Heavy Melee:</strong> 116 +4.03</li>
+            </ul>
+            <p>
+                Case Closed reloads one shell at a time and can be interrupted.
+                It has a 0.7s delay before reloading begins after firing. The
+                spread pattern fires 9 pellets in a square formation with one
+                pellet at the center. Falloff range is 17m → 40m [citation:5][citation:13].
+            </p>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Siphon Life</h4>
+                <p>
+                    Drain health from nearby enemies in front of you, dealing spirit
+                    damage over time and healing for a portion of the damage dealt.
+                    Abrams retains full control while active—he can move, dash, jump,
+                    shoot, and use other abilities.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 8m</li>
+                    <li><strong>Duration:</strong> 4s</li>
+                    <li><strong>Cooldown:</strong> 42s</li>
+                    <li><strong>Lifesteal vs Non-Heroes:</strong> 35%</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Shoulder Charge</h4>
+                <p>
+                    Charge forward, pulling enemies you hit along with you. Pushing a
+                    hero into a wall applies a stun. Colliding with an enemy hero
+                    increases your movement speed during the charge.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Duration:</strong> 1.4s</li>
+                    <li><strong>Cooldown:</strong> 33s</li>
+                    <li><strong>Base Distance:</strong> ~17.5m</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Infernal Resilience</h4>
+                <p>
+                    Gain bonus defensive attributes. Taking damage grants temporary
+                    regeneration for a portion of the damage taken. The healing is
+                    based on actual health lost.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Type:</strong> Passive</li>
+                    <li><strong>Damage Regenerated:</strong> 13%</li>
+                    <li><strong>Regeneration Duration:</strong> 20s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Seismic Impact <em>(Ultimate)</em></h4>
+                <p>
+                    Leap high into the air before crashing into the ground, dealing
+                    spirit damage and applying stun to all enemies in the radius.
+                    If Abrams collides with a flying enemy while crashing, he drags
+                    them down with him.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 215s</li>
+                    <li><strong>Impact Radius:</strong> 9m</li>
+                    <li><strong>Max Jump Distance:</strong> ~55m</li>
+                    <li><strong>Stun Duration:</strong> 1.6s</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                Hard hitting, hard headed, and hard drinking; Detective Abrams has
+                been a fixture on the New York investigating scene for years. From
+                stolen art, to missing persons, to ritual murders; Abrams didn't just
+                take any case that came across his desk… he solved them.
+            </p>
+            <p>
+                But his days of following cheating spouses came to an end the day he
+                opened his office door and found The Tome sitting on his desk. No
+                instruction was left for him save for a brief note scrawled in onyx
+                blood that read "Don't let them have it". Abrams hasn't figured where
+                the thing came from; but seeing as his home has been broken into, his
+                office tossed on 3 different occasions, and his car firebombed, he has
+                a vested interest in figuring out what the hell is going on.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeste | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Celeste_card.png" alt="Celeste portrait">
+            <div class="hero-header-text">
+                <h2><img src="Celeste_name.svg" alt="Celeste" class="hero-name-img-large"></h2>
+                <span class="role-tag support">Support</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-celeste" src="Unicorn_use_power3_10.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-celeste')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 690 +33</li>
+                <li><strong>Health Regen:</strong> 1</li>
+                <li><strong>Move Speed:</strong> 6.2 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 16.1 m/s</li>
+                <li><strong>Stamina:</strong> 4</li>
+                <li><strong>Stamina Cooldown:</strong> 5.3s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Carny Life</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Projectile, Bouncy</li>
+                <li><strong>Damage Per Second:</strong> 31</li>
+                <li><strong>Bullet Damage:</strong> 18 +0.82</li>
+                <li><strong>Ammo:</strong> 8</li>
+                <li><strong>Bullets per sec:</strong> 1.72</li>
+                <li><strong>Reload Time:</strong> 2s</li>
+                <li><strong>Bullet Velocity:</strong> 50 m/s</li>
+                <li><strong>Bullet Radius:</strong> 45.7 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Crit Bonus Scale:</strong> -25%</li>
+            </ul>
+            <p>
+                Carny Life's projectile flies in an arc and bounces on the first surface it hits.
+                If an enemy is within a narrow angle (~45°) of the bounce, the projectile homes
+                toward them. Celeste cannot buy Split Shot.
+            </p>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Light Eater</h4>
+                <p>
+                    Blast enemies in a cone in front of you with a flare of light. Blasted
+                    enemies take spirit damage when attacked by Celeste and provide her
+                    spirit lifesteal.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 10m</li>
+                    <li><strong>Cooldown:</strong> 20s</li>
+                    <li><strong>Duration:</strong> 8s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Dazzling Trick</h4>
+                <p>
+                    Envelop yourself in a prismatic barrier that grants bonus movement speed.
+                    If the barrier breaks, it explodes, silencing nearby enemies and reflecting
+                    a portion of the damage.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Barrier:</strong> 100</li>
+                    <li><strong>Duration:</strong> 4s</li>
+                    <li><strong>Cooldown:</strong> 33s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Radiant Daggers</h4>
+                <p>
+                    Call down a beam of light from the sky. After a short delay, the beam
+                    explodes, dealing spirit damage to all targets in the area. Celeste gains
+                    a stacking buff that increases her spirit damage whenever this hits an
+                    enemy hero.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 30m</li>
+                    <li><strong>Cooldown:</strong> 33s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Shining Wonder <em>(Ultimate)</em></h4>
+                <p>
+                    Launch a deadly orb of light that deals spirit damage, applies a slow,
+                    and reduces enemy dash distance on impact. The orb then bounces to nearby
+                    enemies, prioritizing heroes. Can be held indefinitely and fires when
+                    the ability key is released.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Damage:</strong> 140</li>
+                    <li><strong>Slow:</strong> 32%</li>
+                    <li><strong>Bounces:</strong> 8</li>
+                    <li><strong>Cooldown:</strong> 160s</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- INNATE / PASSIVE -->
+        <section class="hero-innate">
+            <h3>Innate</h3>
+            <p>
+                Celeste has altered aerial movement, allowing her to glide gracefully above
+                the battlefield:
+            </p>
+            <ul class="stats-list">
+                <li><strong>Gravity Scale:</strong> -25%</li>
+                <li><strong>Air Control:</strong> +44%</li>
+                <li><strong>Air Acceleration:</strong> +10%</li>
+            </ul>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                Even in a world of magic, some things are still rare and unusual. So what is
+                a unicorn to do? Announce her presence to the world and potentially have
+                poachers looking to saw off her horn? Or hide in plain sight at a Coney Island
+                Side Show where most folk would assume her appearance was just part of an act?
+            </p>
+            <p>
+                Over the years "The Dazzling Celeste" has grown into one of the more popular
+                attractions on Coney, and while the applause from a cheering audience is
+                appreciated, what keeps her waking up in the morning is the found family she's
+                made at work: Keruba the Mermaid, Blockhead Lenny, Chickenwing, and Ted.
+            </p>
+            <p>
+                So when she discovered that one of her own sold part of their soul in order to
+                cover a gambling debt, Celeste knew it was time to step out of the shadows and
+                do whatever it takes to get it back. Is revealing her power to The Patrons a
+                risk? Yes. But that's tomorrow's problem—her family needs help today.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

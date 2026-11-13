@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haze | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Haze_card.png" alt="Haze portrait">
+            <div class="hero-header-text">
+                <h2><img src="Haze_name.svg" alt="Haze" class="hero-name-img-large"></h2>
+                <span class="role-tag damage">Damage</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-haze" src="Haze_upgrade_power2_10.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-haze')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 730 +33</li>
+                <li><strong>Health Regen:</strong> 2</li>
+                <li><strong>Move Speed:</strong> 8.2 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 16.1 m/s</li>
+                <li><strong>Stamina:</strong> 3</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Censure &amp; Penance</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Rapid Fire, Close Range</li>
+                <li><strong>Damage Per Second:</strong> 50.1</li>
+                <li><strong>Bullet Damage:</strong> 5.26 +0.143</li>
+                <li><strong>Ammo:</strong> 25 (x0.5 scaling)</li>
+                <li><strong>Bullets per sec:</strong> 9.52</li>
+                <li><strong>Reload Time:</strong> 2.35s</li>
+                <li><strong>Bullet Velocity:</strong> 762 m/s</li>
+                <li><strong>Bullet Radius:</strong> 7.62 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Falloff Range:</strong> 20m → 46m</li>
+            </ul>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Sleep Dagger</h4>
+                <p>
+                    Throw a dagger that damages and sleeps the target. Sleeping targets
+                    wake up shortly after being damaged. Throwing a Dagger does not break
+                    your invisibility. Sleep Dagger does not interrupt enemies' channeling
+                    abilities.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Damage:</strong> 65</li>
+                    <li><strong>Cooldown:</strong> 30s</li>
+                    <li><strong>Sleep Duration:</strong> 2.75s</li>
+                    <li><strong>Cast Delay:</strong> 0.2s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Smoke Bomb</h4>
+                <p>
+                    Fade out of sight, becoming invisible and gaining sprint speed.
+                    Attacking removes invisibility, but using items does not. Close
+                    enemies can see through your invisibility.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 33s</li>
+                    <li><strong>Duration:</strong> 8s</li>
+                    <li><strong>Fade Time:</strong> 1.5s</li>
+                    <li><strong>Spot Radius:</strong> 18m</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Fixation</h4>
+                <p>
+                    Shooting a target increases your bullet damage on that target.
+                    Gain one stack per bullet hit, two if the hit is a headshot.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Type:</strong> Passive</li>
+                    <li><strong>Damage Bonus:</strong> +0.2 per stack</li>
+                    <li><strong>Max Stacks:</strong> 40</li>
+                    <li><strong>Duration:</strong> 6s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Bullet Dance <em>(Ultimate)</em></h4>
+                <p>
+                    Enter a flurry, firing your weapon at nearby enemies with perfect
+                    accuracy and added bullet damage. During the flurry, Haze gains a
+                    fire rate bonus and will evade some of the bullets shot at her.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 165s</li>
+                    <li><strong>Duration:</strong> 3.5s</li>
+                    <li><strong>Radius:</strong> 16m</li>
+                    <li><strong>Fire Rate Bonus:</strong> 25%</li>
+                    <li><strong>Evasion:</strong> 30%</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                The Occult Security and Investigation Commission is a black box government
+                organization that makes the CIA look transparent. It falls on the men, women,
+                and entities of the OSIC to keep the country safe from sinister forces that
+                are beyond the capabilities of local law enforcement.
+            </p>
+            <p>
+                As a member of the notorious Sandman Division, Haze is routinely tasked with
+                infiltrating the dreams of persons of interest, to assess their threat level,
+                and if needed… to put them to sleep.
+            </p>
+            <p>
+                Haze is fighting in the ritual on behalf of the OSIC. Her wish is unknown,
+                although the Patrons tempt her to wish herself a new life.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

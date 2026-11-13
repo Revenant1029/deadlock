@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION (same as other pages) -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Solomon_card.png" alt="Solomon portrait">
+            <div class="hero-header-text">
+                <h2>
+                    <img src="Solomon_name.svg" alt="Solomon" class="hero-name-img-large">
+                </h2>
+                <span class="role-tag mystic">Mystic</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-solomon" src="Chessmaster_upgrade_power3_03.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-solomon')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 780 +40</li>
+                <li><strong>Health Regen:</strong> 2</li>
+                <li><strong>Move Speed:</strong> 6.7 m/s</li>
+                <li><strong>Sprint Speed:</strong> 3.3 m/s</li>
+                <li><strong>Dash Speed:</strong> 13.9 m/s</li>
+                <li><strong>Stamina:</strong> 2</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: Alekhine's Gun</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Rapid Fire, Long Range</li>
+                <li><strong>Damage Per Second:</strong> 50</li>
+                <li><strong>Bullet Damage:</strong> 25 +0.4x0.14</li>
+                <li><strong>Ammo:</strong> 8</li>
+                <li><strong>Bullets per sec:</strong> 2</li>
+                <li><strong>Reload Time:</strong> 3s</li>
+                <li><strong>Bullet Velocity:</strong> 356 m/s</li>
+                <li><strong>Bullet Radius:</strong> 20.3 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Crit Bonus Scale:</strong> -20%</li>
+                <li><strong>Falloff Range:</strong> 20m → 46m</li>
+            </ul>
+            <p>
+                Solomon cannot zoom in by default, as his right-click is used to move his
+                ability pieces. Projectiles explode in a ~1m radius for full damage,
+                including headshot damage.
+            </p>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Setup Bishop</h4>
+                <p>
+                    Create a bishop that remains in place indefinitely. Move it to apply a
+                    fading slow and deal spirit damage to enemies it passes through. After
+                    a delay, it activates diagonal squares that deal additional spirit damage
+                    when stepped on. Re-activate to recall all bishops.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 20m</li>
+                    <li><strong>Cooldown:</strong> 12s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Kingside Knight</h4>
+                <p>
+                    Promote an ally to be a knight, granting bonus stamina and a barrier
+                    for a duration. If self-cast, you develop yourself as king instead,
+                    granting double the barrier but no stamina.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 28m</li>
+                    <li><strong>Cooldown:</strong> 25s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Rook Battery</h4>
+                <p>
+                    Release a pair of rooks that travel forward, dealing spirit damage and
+                    applying immobilize. If the rooks hit a wall, they reflect back in the
+                    opposite direction. Re-activate to split the rooks perpendicularly.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 33s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Develop Queen <em>(Ultimate)</em></h4>
+                <p>
+                    Summon a queen that crashes down, dealing spirit damage in an area.
+                    After a delay, the queen releases squares in straight lines that deal
+                    spirit damage again and apply stun. Heroes hit that are low health are
+                    <em>checkmated</em>, executing them. Re-activate to recall the queen early.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 30m</li>
+                    <li><strong>Cooldown:</strong> 240s</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- INNATE / PASSIVE -->
+        <section class="hero-innate">
+            <h3>Innate</h3>
+            <p>
+                Solomon has a passive that alters his aerial movement. He also floats in
+                the air for a few seconds while aiming where to move his pieces.
+            </p>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                In a world that moves too fast, Solomon is content to stop and listen.
+                Offering a friendly ear and good counsel, Solomon has found himself sitting
+                across the chess table from tourists, criminals, and titans of industry.
+                But no matter his opponent, Solomon remains un-phased — because to him,
+                chess is so much more than a game. It's an equalizer. A way for him to
+                connect to people from all walks of life on an even playing field.
+            </p>
+            <p>
+                As a long-term chess player in Central Park, he joined the Ritual to prevent
+                the power of the Patrons from falling into the wrong hands.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER (same as other pages) -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grey Talon | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Grey_Talon_card.png" alt="Grey Talon portrait">
+            <div class="hero-header-text">
+                <h2><img src="Grey_Talon_name.svg" alt="Grey Talon" class="hero-name-img-large"></h2>
+                <span class="role-tag damage">Damage</span>
+                <p class="tagline">
+                    A cunning predator who uses deadly accuracy, traps, and clever
+                    positioning to bring down the toughest of opponents.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 780 +38</li>
+                <li><strong>Health Regen:</strong> 1.5</li>
+                <li><strong>Move Speed:</strong> 6.3 m/s (x0.0084)</li>
+                <li><strong>Sprint Speed:</strong> 1.6 m/s</li>
+                <li><strong>Dash Speed:</strong> 16.1 m/s</li>
+                <li><strong>Stamina:</strong> 4</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: The Mourning Comes</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Medium Range, Heavy Hitter, Projectile</li>
+                <li><strong>Damage Per Second:</strong> 39.2</li>
+                <li><strong>Bullet Damage:</strong> 23.5 +0.85x0.08</li>
+                <li><strong>Ammo:</strong> 17</li>
+                <li><strong>Bullets per sec:</strong> 1.67</li>
+                <li><strong>Reload Time:</strong> 2.35s</li>
+                <li><strong>Bullet Velocity:</strong> 495 m/s</li>
+                <li><strong>Bullet Radius:</strong> 12.7 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.58</li>
+                <li><strong>Heavy Melee:</strong> 116 +3.67</li>
+                <li><strong>Falloff Range:</strong> 18m → 54m</li>
+            </ul>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Charged Shot</h4>
+                <p>
+                    Charge up a powerful shot that pierces through enemies. Hold the
+                    ability key or fire button to hold the shot.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 17s</li>
+                    <li><strong>Charges:</strong> 1</li>
+                    <li><strong>Charge Delay:</strong> 4s</li>
+                    <li><strong>Damage:</strong> 80 +1</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Rain of Arrows</h4>
+                <p>
+                    Launch yourself high in the air, allowing you to glide slowly. While
+                    airborne, you gain weapon damage and multishot on your weapon. Press
+                    jump to cancel the glide.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 25s</li>
+                    <li><strong>Duration:</strong> 4s</li>
+                    <li><strong>Weapon Multishot:</strong> 5</li>
+                    <li><strong>Weapon Damage Bonus:</strong> +3</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Spirit Snare</h4>
+                <p>
+                    Throw out a trap that begins to arm itself. Once armed, the trap
+                    triggers when an enemy enters its radius, applying Curse and Movement
+                    Slow that interrupts, Silences, Disarms, and prevents item usage. Hit
+                    the trap with a Charged Shot to detonate early with increased radius.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 34s</li>
+                    <li><strong>Radius:</strong> 6.5m</li>
+                    <li><strong>Tether Duration:</strong> 2.25s</li>
+                    <li><strong>Damage:</strong> 25</li>
+                    <li><strong>Arm Time:</strong> 2s</li>
+                    <li><strong>Slow:</strong> 24%</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Guided Owl <em>(Ultimate)</em></h4>
+                <p>
+                    After a cast time, launch a spirit owl that you control and which
+                    explodes on impact, damaging and stunning enemies. Hold forward to
+                    accelerate the owl. Press jump to release control. Gain permanent
+                    Spirit Power for each enemy hero killed with Guided Owl.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Cooldown:</strong> 125s</li>
+                    <li><strong>Channel Duration:</strong> 20s</li>
+                    <li><strong>Damage:</strong> 230 +0.94</li>
+                    <li><strong>Explosion Radius:</strong> 12m</li>
+                    <li><strong>Stun Duration:</strong> 0.75s</li>
+                    <li><strong>Spirit Power Per Kill:</strong> 8</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                A founding member of "The Baxter Society", Wesley Grey Talon spent close
+                to 40 years hunting monsters that preyed on man before finally deciding
+                to find a replacement and lay down his bow. Grey Talon's duties had meant
+                that he never spent much time with his wife and kid, and now that his son
+                had started a family of his own he realized that this was his last chance
+                to reconnect with the people he loved.
+            </p>
+            <p>
+                Retirement suited Wesley. He made up for lost time with his wife. He doted
+                on his grandkids. He cooked dinner for the whole family every Wednesday.
+                He was happy.
+            </p>
+            <p>
+                Then he got the call. The authorities claimed that it was a freak accident...
+                that the fire consumed his son's house before anyone got a chance to escape.
+                But Wesley knew better. His son's wife was Ixian... she could snuff out flame
+                with a thought. If their bodies were found burned they had to be dead long
+                before there was a fire.
+            </p>
+            <p>
+                And so Grey Talon has picked up his bow once more, and when he finds who's
+                responsible there will be a bloody reckoning.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+</body>
+</html>

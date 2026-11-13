@@ -1,0 +1,909 @@
+/* ============================================
+   1. GLOBAL / RESET
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Deadlock-inspired palette */
+    --bg-dark: #0d0d0f;
+    --bg-panel: #16161a;
+    --bg-card: #1c1c22;
+    --bg-hover: #232329;
+    --text-main: #e8e6e3;
+    --text-muted: #9a9691;
+    --accent: #e8a33d;        /* warm amber, like the game's UI */
+    --accent-hover: #f5b954;
+    --border: #2a2a32;
+    --radius: 6px;
+    --font-body: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-heading: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================
+   2. HEADER & NAVIGATION
+   ============================================ */
+header {
+    background-color: var(--bg-panel);
+    border-bottom: 2px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ============================================
+   HEADER LOGO
+   ============================================ */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.logo-img {
+    height: 64px;
+    width: auto;
+    display: block;
+}
+
+.logo .subtitle {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-left: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* ============================================
+   3. MAIN CONTENT WRAPPER
+   ============================================ */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: #0d0d0f;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    color: #0d0d0f;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent);
+    color: #0d0d0f;
+}
+
+/* ============================================
+   5. HOME PAGE — HERO BANNER
+   ============================================ */
+.hero-banner {
+    display: flex;
+    flex-direction: column; /* Stacks image on top of text */
+    background: linear-gradient(135deg, var(--bg-panel) 0%, var(--bg-card) 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden; /* Keeps the image corners rounded */
+    margin-bottom: 2.5rem;
+}
+
+/* New rule specifically for the wide banner image */
+.banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Prevents it from getting too huge on wide screens */
+    object-fit: cover; /* Crops the image nicely instead of squishing it */
+    object-position: center;
+    border-bottom: 2px solid var(--border); /* Separates image from text */
+}
+
+.hero-banner .hero-text {
+    padding: 2.5rem;
+}
+
+.hero-banner h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-banner .hero-image {
+    flex: 1;
+    max-width: 70%;
+}
+
+.hero-banner .hero-image img {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+/* Hero preview strip (also used on About page CTA) */
+.hero-preview {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.75rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-preview h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   6. HOME PAGE — LATEST INTEL CARDS
+   ============================================ */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.card h4 {
+    margin-bottom: 0.6rem;
+}
+
+.card a {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   7. HEROES PAGE — INTRO, FILTER, GRID
+   ============================================ */
+.page-intro {
+    margin-bottom: 2rem;
+}
+
+.page-intro p {
+    max-width: 700px;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-main);
+}
+
+.filter-btn.active {
+    background-color: var(--accent);
+    color: #0d0d0f;
+    border-color: var(--accent);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.hero-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.hero-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.hero-card > img {
+    width: 100%;
+    height: 250px; /* INCREASED from 180px/220px to make it taller */
+    object-fit: cover; /* Fills the whole box without squishing */
+    object-position: center top; /* Keeps the focus on the character's face */
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+    padding: 0; /* Removed padding so the image goes edge-to-edge */
+}
+
+.hero-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hero-card-body h3 {
+    /* Remove the old text styles since we are using an image now */
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    line-height: 0; /* Prevents extra space below the image */
+}
+
+.hero-name-img {
+    height: 50px; /* Adjust this to make the nameplates bigger or smaller */
+    width: auto;
+    max-width: 90%; /* Prevents it from overflowing the card */
+    object-fit: contain;
+    object-position: left center;
+
+    /* This is the magic part! */
+    /* If your image has a solid white background, this will make the white transparent */
+    mix-blend-mode: screen;
+
+    /* If the blend mode makes the image look weird, remove it and just use this: */
+    /* filter: invert(1); (Only do this if your image is black text on a white background) */
+}
+
+.hero-name-img-large {
+    height: 80px; /* Larger for the detail page */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+.hero-card-body p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.card-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    align-self: flex-start;
+}
+
+.card-link:hover {
+    color: var(--accent-hover);
+}
+
+/* Role tags — shared across cards and detail pages */
+.role-tag {
+    display: inline-block;
+    align-self: flex-start; /* This stops the badge from stretching! */
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.6rem;
+}
+
+.role-tag.tank {
+    background-color: rgba(79, 139, 201, 0.15);
+    color: #6ea8e0;
+    border: 1px solid rgba(79, 139, 201, 0.35);
+}
+
+.role-tag.damage {
+    background-color: rgba(201, 79, 79, 0.15);
+    color: #e07a7a;
+    border: 1px solid rgba(201, 79, 79, 0.35);
+}
+
+.role-tag.support {
+    background-color: rgba(79, 201, 135, 0.15);
+    color: #6ee0a0;
+    border: 1px solid rgba(79, 201, 135, 0.35);
+}
+
+.role-tag.mystic {
+    background-color: rgba(155, 79, 201, 0.15);
+    color: #b47ae0;
+    border: 1px solid rgba(155, 79, 201, 0.35);
+}
+
+/* ============================================
+   8. HERO DETAIL PAGES
+   ============================================ */
+.back-link {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-header > img {
+    width: 300px;
+    height: 350px; /* Portrait orientation */
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.hero-header-text {
+    flex: 1;
+}
+
+.hero-header-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.hero-header-text .tagline {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Stat list — used in vitality, weapon, innate sections */
+.stats-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.5rem 1.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stats-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted var(--border);
+}
+
+.stats-list li strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Ability blocks */
+.ability {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ability h4 {
+    margin-bottom: 0.5rem;
+}
+
+.ability p {
+    font-size: 0.92rem;
+}
+
+.ability-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.ability-meta li {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ability-meta li strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Weapon and innate reuse the section rhythm */
+.hero-weapon p,
+.hero-innate p {
+    font-size: 0.9rem;
+}
+
+.hero-innate .stats-list {
+    margin-top: 0.75rem;
+}
+
+/* Lore block — slightly different treatment */
+.hero-lore p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+/* ============================================
+   AUTHOR CREDITS & MAINS
+   ============================================ */
+.about-credits {
+    /* Removed the left yellow border so it blends in cleanly */
+    border-left: none;
+}
+
+.author-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 3rem; /* Space between the two authors */
+    margin-top: 1rem;
+}
+
+.author-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.author-name {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 1.1rem;
+}
+
+/* The Mains Container */
+.mains-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Slightly increased gap for the bigger icons */
+}
+
+.mains-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 0.25rem;
+}
+
+/* The Hero Icons (Increased Size) */
+.main-icon {
+    width: 45px;  /* Increased from 32px */
+    height: 45px; /* Increased from 32px */
+    object-fit: cover;
+    border-radius: 50%; /* Keeps them perfectly circular */
+    border: 1px solid var(--border);
+    background-color: var(--bg-dark);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: help;
+}
+
+/* Hover effect for the icons */
+.main-icon:hover {
+    transform: scale(1.15);
+    border-color: var(--accent);
+}
+
+
+/* Individual name colors — uncomment to use different colors per author */
+/*
+.author-list li:nth-child(1) .author-name {
+    color: #e8a33d;
+}
+
+.author-list li:nth-child(2) .author-name {
+    color: #4ecdc4;
+}
+*/
+
+.about-disclaimer {
+    border-left: 4px solid #c94f4f;
+    background-color: rgba(201, 79, 79, 0.05);
+}
+
+.about-disclaimer {
+    /* Removed the red border */
+    border-left: none;
+
+    /* Kept the very faint red tint so it still looks like a warning/notice */
+    background-color: rgba(201, 79, 79, 0.03);
+}
+
+/* ============================================
+   10. FOOTER
+   ============================================ */
+footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-panel);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+footer em {
+    color: var(--text-main);
+}
+
+/* ============================================
+   PLAYABLE VOICE LINES
+   ============================================ */
+.playable-quote {
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    border-left: 2px solid transparent;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+/* The little play triangle */
+.play-icon {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-top: 0.2rem;
+}
+
+/* Hover effect */
+.playable-quote:hover {
+    color: var(--text-main);
+    background-color: rgba(232, 163, 61, 0.1); /* Faint amber background */
+    border-left-color: var(--accent);
+}
+
+/* Optional: When the audio is actually playing */
+.playable-quote.playing {
+    color: var(--accent);
+    border-left-color: var(--accent);
+}
+
+/* ============================================
+   HEROES PAGE — FILTER BAR
+   ============================================ */
+.filter-btn {
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-muted);
+}
+
+/* --------------------------------------------
+   THE ACTIVE BUTTON COLORS
+   -------------------------------------------- */
+
+/* 1. The "All" button (defaults to the site's main amber accent) */
+.filter-btn.active {
+    background-color: var(--accent);
+    color: #0d0d0f; /* Dark text for contrast */
+    border-color: var(--accent);
+}
+
+/* 2. The Tank button (Blue) */
+.filter-btn.active[data-filter="tank"] {
+    background-color: rgba(79, 139, 201, 0.2);
+    color: #6ea8e0;
+    border-color: #6ea8e0;
+}
+
+/* 3. The Damage button (Red) */
+.filter-btn.active[data-filter="damage"] {
+    background-color: rgba(201, 79, 79, 0.2);
+    color: #e07a7a;
+    border-color: #e07a7a;
+}
+
+/* 4. The Support button (Green) */
+.filter-btn.active[data-filter="support"] {
+    background-color: rgba(79, 201, 135, 0.2);
+    color: #6ee0a0;
+    border-color: #6ee0a0;
+}
+
+/* 5. The Mystic button (Purple) */
+.filter-btn.active[data-filter="mystic"] {
+    background-color: rgba(155, 79, 201, 0.2);
+    color: #b47ae0;
+    border-color: #b47ae0;
+}
+
+/* ============================================
+   PATCH NOTES / GUIDE IMAGES
+   ============================================ */
+.patch-image {
+    width: 80%;
+    height: auto; /* Lets the image scale perfectly based on its width */
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin: 1.5rem 0;
+    background-color: var(--bg-panel);
+    display: block;
+}
+
+/* ============================================
+   UPDATE PAGE HERO GRID
+   ============================================ */
+.update-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Made slightly wider to fit icons */
+    gap: 1rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.update-hero-tag {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 0.5rem 1rem 0.5rem 0.5rem; /* Less padding on the left to hug the icon */
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    cursor: default;
+
+    /* ADDED: Flexbox to put icon and text side-by-side */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* The Hero Icons inside the cards */
+.update-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background-color: var(--bg-dark);
+}
+
+/* Hover effect */
+.update-hero-tag:hover {
+    border-color: var(--accent);
+    background-color: var(--bg-hover);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Make the icon border change color on hover too */
+.update-hero-tag:hover .update-icon {
+    border-color: var(--accent);
+}
+
+/* The Hero Nameplates inside the cards */
+.update-name-img {
+    height: 30px; /* Keeps the nameplates a uniform, small size */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen; /* Makes the white background of the PNG transparent */
+}
+
+/* Hover effect for the nameplate */
+.update-hero-tag:hover .update-name-img {
+    /* Optional: You can add a brightness effect if you want them to glow slightly on hover */
+    filter: brightness(1.2);
+}
+
+/* ============================================
+   11. RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 1.25rem;
+    }
+
+    .hero-banner,
+    .hero-header {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .hero-banner .hero-image,
+    .hero-header > img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Inside the @media block... */
+    .hero-header > img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .stats-list {
+        grid-template-columns: 1fr;
+    }
+}

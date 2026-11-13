@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venator | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="heroes.html">&larr; Back to Hero Roster</a>
+        </div>
+
+        <!-- HERO HEADER -->
+        <section class="hero-header">
+            <img src="Venator_card.png" alt="Venator portrait">
+            <div class="hero-header-text">
+                <h2><img src="253px-Venator_name.svg.png" alt="Venator" class="hero-name-img-large"></h2>
+                <span class="role-tag damage">Damage</span>
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-venator" src="Priest_use_power1_03.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-venator')">
+                    <span class="play-icon">▶</span>
+                    A strategic chessmaster who navigates his bishops, knights, and rooks around a fight before dropping the Queen in an ultimate checkmate.
+                </p>
+            </div>
+        </section>
+
+        <!-- VITALITY -->
+        <section class="hero-vitality">
+            <h3>Vitality</h3>
+            <ul class="stats-list">
+                <li><strong>Health:</strong> 830 +48</li>
+                <li><strong>Health Regen:</strong> 2</li>
+                <li><strong>Bullet Resist:</strong> 0% x0.122</li>
+                <li><strong>Spirit Resist:</strong> 0% x0.122</li>
+                <li><strong>Move Speed:</strong> 6.4 m/s</li>
+                <li><strong>Sprint Speed:</strong> 1 m/s</li>
+                <li><strong>Dash Speed:</strong> 13.9 m/s</li>
+                <li><strong>Stamina:</strong> 3</li>
+                <li><strong>Stamina Cooldown:</strong> 4.5s</li>
+            </ul>
+        </section>
+
+        <!-- WEAPON -->
+        <section class="hero-weapon">
+            <h3>Weapon: 51:20</h3>
+            <ul class="stats-list">
+                <li><strong>Type:</strong> Rapid Fire, Medium Range</li>
+                <li><strong>Damage Per Second:</strong> 63.5</li>
+                <li><strong>Bullet Damage:</strong> 8 +0.27</li>
+                <li><strong>Ammo:</strong> 33</li>
+                <li><strong>Bullets per sec:</strong> 7.94</li>
+                <li><strong>Reload Time:</strong> 2.8s</li>
+                <li><strong>Bullet Velocity:</strong> 1590 m/s</li>
+                <li><strong>Bullet Radius:</strong> 7.62 cm</li>
+                <li><strong>Light Melee:</strong> 50 +1.7</li>
+                <li><strong>Heavy Melee:</strong> 125 +4.25</li>
+                <li><strong>Falloff Range:</strong> 18m → 47m</li>
+            </ul>
+        </section>
+
+        <!-- ABILITIES -->
+        <section class="hero-abilities">
+            <h3>Abilities</h3>
+
+            <article class="ability">
+                <h4>Consecrating Grenade</h4>
+                <p>
+                    Fire a grenade that bounces before exploding, dealing weapon damage and
+                    setting enemies on fire. Burning targets deal pure damage to enemies in
+                    the area and suffer from reduced healing. A direct hit will detonate on
+                    impact without bouncing.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 4.5m</li>
+                    <li><strong>Cooldown:</strong> 25s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Gutshot</h4>
+                <p>
+                    Fire a blast with your shotgun, dealing weapon damage and pushing enemies
+                    back. Enemies near a wall receive stun and take bonus weapon damage. At
+                    max level, stunning an enemy with a wall impact blesses your next heavy
+                    melee attack, dealing pure damage and executing low-health targets.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 10m</li>
+                    <li><strong>Cooldown:</strong> 23s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Hex-Lined Snap Trap</h4>
+                <p>
+                    Kick a trap that arms after a brief delay. The trap springs on the first
+                    enemy it touches, dealing spirit damage, applying immobilize, and revealing
+                    enemies for a duration afterwards. Enemies can shoot the trap to disarm it.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Range:</strong> 2m</li>
+                    <li><strong>Charges:</strong> 2</li>
+                    <li><strong>Charge Delay:</strong> 8s</li>
+                    <li><strong>Cooldown:</strong> 28s</li>
+                </ul>
+            </article>
+
+            <article class="ability">
+                <h4>Ira Domini <em>(Ultimate)</em></h4>
+                <p>
+                    Load your crossbow with 3 stakes, dealing massively increased weapon damage.
+                    The final stake is blessed, dealing bonus pure damage and executing low-health
+                    enemies. Bolts are hitscan and pierce through enemies. At max level, all
+                    stakes become blessed.
+                </p>
+                <ul class="ability-meta">
+                    <li><strong>Duration:</strong> 15s</li>
+                    <li><strong>Cooldown:</strong> 160s</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- LORE -->
+        <section class="hero-lore">
+            <h3>Lore</h3>
+            <p>
+                The Venators of St. Benedict are a Vatican-sanctioned order whose members are
+                deployed to regions with a high concentration of supernatural predators. Few
+                in number, their modus operandi is to observe, identify, and exterminate. They
+                are methodical, they are precise, and once they identify a threat to the flock
+                they are relentless.
+            </p>
+            <p>
+                But even amongst those who are called The Sword Of St. Benedict, one stands
+                apart from the others. A man whose hardened heart has allowed him to pay
+                terrible prices in the name of the greater good… and he has once again been
+                dispatched to New York.
+            </p>
+            <p>
+                His real name is Father Quinn Rourke, and his mission in the ritual is to kill
+                the Patrons. He refers to himself as a <em>Carnifex</em>—Latin for executioner.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+    function playVoiceLine(audioId) {
+        const audio = document.getElementById(audioId);
+        const quoteElement = audio.nextElementSibling; // Grabs the <p> right after the <audio> tag
+
+        // If the audio is already playing, stop it and reset
+        if (!audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            quoteElement.classList.remove('playing');
+            return;
+        }
+
+        // Otherwise, play it
+        audio.play().then(() => {
+            quoteElement.classList.add('playing');
+        }).catch(error => {
+            console.log("Audio playback failed or file missing: ", error);
+        });
+
+        // When the audio finishes, remove the 'playing' class
+        audio.onended = function() {
+            quoteElement.classList.remove('playing');
+        };
+    }
+</script>
+
+</body>
+</html>

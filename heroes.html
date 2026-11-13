@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes | Deadlock Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. SITE HEADER & NAVIGATION (same as index) -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Deadlock" class="logo-img">
+            <span class="subtitle">Fan Database</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heroes.html" class="active">Heroes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN CONTENT -->
+    <main>
+
+        <!-- PAGE INTRO -->
+        <section class="page-intro">
+            <h2>Hero Roster</h2>
+            <p>
+                Every hero in Deadlock brings a unique kit to the lanes.
+                Filter by role or browse the full roster below.
+            </p>
+        </section>
+
+        <!-- FILTER BAR (JavaScript will hook into these later) -->
+        <section class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tank">Tank</button>
+            <button class="filter-btn" data-filter="damage">Damage</button>
+            <button class="filter-btn" data-filter="support">Support</button>
+            <button class="filter-btn" data-filter="mystic">Mystic</button>
+        </section>
+
+        <!-- HERO GRID -->
+        <section class="hero-grid">
+
+            <!-- HERO CARD: Solomon -->
+            <article class="hero-card" data-role="mystic">
+                <img src="1024px-Solomon_Render.png" alt="Solomon portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Solomon_name.svg" alt="Solomon" class="hero-name-img"></h3>
+                    <span class="role-tag mystic">Mystic</span>
+                    <p>
+                        A chess master who summons pieces to control the board.
+                        His ultimate, <em>Develop Queen</em>, turns the mid-lane into a kill zone.
+                    </p>
+                    <a href="solomon.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Venator -->
+            <article class="hero-card" data-role="damage">
+                <img src="1024px-Venator_Render.png" alt="Venator portrait">
+                <div class="hero-card-body">
+                    <h3><img src="253px-Venator_name.svg.png" alt="Venator" class="hero-name-img"></h3>
+                    <span class="role-tag damage">Damage</span>
+                    <p>
+                        A Vatican agent armed with a crossbow and traps.
+                        Punishes overextended enemies with precise bolts and zone control.
+                    </p>
+                    <a href="venator.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Celeste -->
+            <article class="hero-card" data-role="support">
+                <img src="1024px-Celeste_Render.png" alt="Celeste portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Celeste_name.svg" alt="Celeste" class="hero-name-img"></h3>
+                    <span class="role-tag support">Support</span>
+                    <p>
+                        A unicorn mage who shields and heals allies while disrupting
+                        enemy formations with radiant bursts of light.
+                    </p>
+                    <a href="celeste.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Abrams -->
+            <article class="hero-card" data-role="tank">
+                <img src="1024px-Abrams_Render.png" alt="Abrams portrait">
+                <div class="hero-card-body">
+                    <h3><img src="1920px-Abrams_name.svg.png" alt="Abrams" class="hero-name-img"></h3>
+                    <span class="role-tag tank">Tank</span>
+                    <p>
+                        A brawling frontliner who thrives in close quarters.
+                        Charges in, soaks damage, and pins enemies against walls.
+                    </p>
+                    <a href="abrams.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Haze -->
+            <article class="hero-card" data-role="damage">
+                <img src="1024px-Haze_Render.png" alt="Haze portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Haze_name.svg" alt="Haze" class="hero-name-img"></h3>
+                    <span class="role-tag damage">Damage</span>
+                    <p>
+                        A stealth assassin who melts single targets from the shadows.
+                        Her smoke bomb and Sleep Dagger set up devastating flanks.
+                    </p>
+                    <a href="haze.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Dynamo -->
+            <article class="hero-card" data-role="support">
+                <img src="1024px-Dynamo_Render.png" alt="Dynamo portrait">
+                <div class="hero-card-body">
+                    <h3><img src="1920px-Dynamo_name.svg.png" alt="Dynamo" class="hero-name-img"></h3>
+                    <span class="role-tag support">Support</span>
+                    <p>
+                        A gravity-wielding caster who lifts and slams entire teams.
+                        His Black Hole ultimate can single-handedly win a fight.
+                    </p>
+                    <a href="dynamo.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Infernus -->
+            <article class="hero-card" data-role="damage">
+                <img src="1024px-Infernus_Render.png" alt="Infernus portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Infernus_name.svg" alt="Infernus" class="hero-name-img"></h3>
+                    <span class="role-tag damage">Damage</span>
+                    <p>
+                        A fire-wielding carry who builds burn stacks with his weapon and abilities.
+                        His passive, <em>Afterburn</em>, lets him melt targets over time while dashing through fights.
+                    </p>
+                    <a href="infernus.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Graves -->
+            <article class="hero-card" data-role="mystic">
+                <img src="1024px-Graves_Render.png" alt="Graves portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Graves_name.svg" alt="Graves" class="hero-name-img"></h3>
+                    <span class="role-tag mystic">Mystic</span>
+                    <p>
+                        A necromancer who controls space with <em>Grasping Hands</em> and summons Deadheads from her Jar of Dead.
+                        Her ultimate, <em>Borrowed Decree</em>, sends explosive ghouls down the lane.
+                    </p>
+                    <a href="graves.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Mo & Krill -->
+            <article class="hero-card" data-role="tank">
+                <img src="1024px-Mo_&_Krill_Render.png" alt="Mo & Krill portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Mo_&_Krill_name.svg" alt="Mo & Krill" class="hero-name-img"></h3>
+                    <span class="role-tag tank">Tank</span>
+                    <p>
+                        A burrowing tank who disrupts fights with disarms and lockdowns.
+                        <em>Burrow</em> closes gaps, <em>Sand Blast</em> disarms, and <em>Combo</em> pins a target while the duo tear them apart.
+                    </p>
+                    <a href="mo-and-krill.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Paige -->
+            <article class="hero-card" data-role="support">
+                <img src="1024px-Paige_Render.png" alt="Paige portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Paige_name.svg" alt="Paige" class="hero-name-img"></h3>
+                    <span class="role-tag support">Support</span>
+                    <p>
+                        A bookish support who conjures dragons and shields allies.
+                        <em>Plot Armor</em> grants barriers with bonus weapon damage, while <em>Rallying Charge</em> heals and stuns across the map.
+                    </p>
+                    <a href="paige.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+            <!-- HERO CARD: Grey Talon -->
+            <article class="hero-card" data-role="damage">
+                <img src="1024px-Grey_Talon_Render.png" alt="Grey Talon portrait">
+                <div class="hero-card-body">
+                    <h3><img src="Grey_Talon_name.svg" alt="Grey Talon" class="hero-name-img"></h3>
+                    <span class="role-tag damage">Damage</span>
+                    <p>
+                        A bow-wielding hunter who controls space with traps and precision.
+                        <em>Spirit Snare</em> roots enemies, <em>Rain of Arrows</em> lets him glide and multishot, and <em>Guided Owl</em> snipes from across the map.
+                    </p>
+                    <a href="grey-talon.html" class="card-link">View Details &rarr;</a>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- 3. SITE FOOTER (same as index) -->
+    <footer>
+        <p>&copy; 2026 Deadlock Fan Hub. This is a fan-made project for educational purposes.</p>
+        <p><em>Deadlock</em> is a trademark of Valve Corporation.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const heroCards = document.querySelectorAll('.hero-card');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 1. Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // 2. Add active class to clicked button
+                    button.classList.add('active');
+
+                    // 3. Get the filter value
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // 4. Loop through hero cards and show/hide them
+                    heroCards.forEach(card => {
+                        const heroRole = card.getAttribute('data-role');
+
+                        if (filterValue === 'all' || filterValue === heroRole) {
+                            card.style.display = ''; // Show card
+                        } else {
+                            card.style.display = 'none'; // Hide card
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
