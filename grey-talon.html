@@ -38,9 +38,13 @@
             <div class="hero-header-text">
                 <h2><img src="Grey_Talon_name.svg" alt="Grey Talon" class="hero-name-img-large"></h2>
                 <span class="role-tag damage">Damage</span>
-                <p class="tagline">
-                    A cunning predator who uses deadly accuracy, traps, and clever
-                    positioning to bring down the toughest of opponents.
+                <!-- The Audio Element (hidden by default) -->
+                <audio id="voice-line-grey-talon" src="Orion_upgrade_power4_04.mp3"></audio>
+
+                <!-- The clickable tagline -->
+                <p class="tagline playable-quote" onclick="playVoiceLine('voice-line-grey-talon')">
+                    <span class="play-icon">▶</span>
+                    I don't have to be the fastest: just the most clever.
                 </p>
             </div>
         </section>
